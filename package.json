@@ -1,0 +1,50 @@
+{
+  "name": "outlook-for-linux",
+  "version": "0.0.4",
+  "description": "Unofficial client for Microsoft Outlook for Linux",
+  "homepage": "https://github.com/eonfow/outlook-for-linux",
+  "keywords": [
+    "Outlook",
+    "Microsoft Outlook"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/eonfow/outlook-for-linux"
+  },
+  "author": "Ivelin Velkov <ivelin.velkov@gmail.com>",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "scripts": {
+    "start": "electron ./app",
+    "start-debug": "WEB_DEBUG=1 electron --disable-http-cache ./app",
+    "pack": "build --dir",
+    "dist": "build",
+    "postinstall": "(cd app; npm install)"
+  },
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-builder": "^13.11.1"
+  },
+  "build": {
+    "appId": "outlook-for-linux",
+    "asar": false,
+    "linux": {
+      "category": "Network;Chat",
+      "packageCategory": "net",
+      "executableName": "outlook",
+      "synopsis": "Microsoft Outlook for Linux",
+      "description": "Unofficial Microsoft Outlook client for Linux using Electron. It uses the Web App\n and wraps it as a standalone application using Electron.",
+      "desktop": {
+        "Name": "Microsoft Outlook for Linux",
+        "Comment": "Unofficial client for Microsoft Outlook for Linux",
+        "StartupWMClass": "outlook"
+      },
+      "target": [
+        "tar.gz",
+        "deb",
+        "rpm",
+        "pacman"
+      ]
+    }
+  },
+  "dependencies": {}
+}

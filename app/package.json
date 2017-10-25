@@ -1,0 +1,10 @@
+{
+  "name": "outlook-for-linux",
+  "version": "0.0.4",
+  "description": "Microsoft outlook for Linux",
+  "main": "lib/index.js",
+  "author": "Ivelin Velkov <ivelin.velkov@gmail.com>",
+  "dependencies": {
+    "open": "0.0.5"
+  }
+}
